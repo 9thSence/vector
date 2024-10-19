@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { AnimatePresence , motion} from 'framer-motion';
 import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import Marquee from './components/Marquee';
@@ -23,14 +24,23 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 8000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className='scroll-container w-full min-h-screen cursor-none '>
-      {isLoading ? (
-        <Preloader />
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <motion.div
+            key="preloader"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 1 }}
+            transition={{ duration: 1}}
+          >
+            <Preloader />
+          </motion.div>
       ) : (
         <>
           {/* Add Custom Cursor here */}
@@ -62,6 +72,7 @@ function App() {
           </Router>
         </>
       )}
+      </AnimatePresence>
     </div>
   );
 }
