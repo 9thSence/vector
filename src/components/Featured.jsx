@@ -43,7 +43,7 @@ function Featured() {
             >
               <motion.img 
                 className='w-full h-full object-cover'  
-                src='public\a1.png' 
+                src='/a1.png' 
                 alt='Project FYDE'  
                 whileHover={{ scale: 1.05 }} // Zoom in on image hover
                 transition={{ duration: 0.5, ease: 'easeInOut' }} // Smooth transition for zoom
@@ -64,7 +64,7 @@ function Featured() {
             >
               <motion.img 
                 className='w-full h-full object-cover'  
-                src='public\a2.png' 
+                src='/a2.png' 
                 alt='Project SKYY'  
                 whileHover={{ scale: 1.05 }} // Zoom in on image hover
                 transition={{ duration: 0.5, ease: 'easeInOut' }} // Smooth transition for zoom
