@@ -41,7 +41,7 @@ function Eyes() {
 
   return (
     <div className='eyes w-full h-screen overflow-hidden'>
-      <div data-scroll data-scroll-speed='-.7' className='relative w-full h-full bg-cover bg-center bg- bg-[url("public/bgeyess.png")]'>
+      <div data-scroll data-scroll-speed='-.7' className='relative w-full h-full bg-cover bg-center bg- bg-[url("/bgeyess.png")]'>
         <div className='absolute flex gap-10 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] h-60'>
 
           {/* Left Eye */}
