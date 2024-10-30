@@ -1,5 +1,7 @@
 **Vector** is a minimal setup for integrating **React** with **Vite**, providing a streamlined development experience with Hot Module Replacement (HMR) and basic ESLint configurations. This repository is ideal for developers looking to quickly bootstrap a React application using Vite.
 
+site is live on : https://vectorrrl.netlify.app/
+
 ## Features
 
 - **React + Vite**: Combines the power of React with the speed of Vite.
