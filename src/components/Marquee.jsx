@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 function Marquee() {
   const [scrollDirection, setScrollDirection] = useState(1); // 1 for down, -1 for up
@@ -16,10 +16,10 @@ function Marquee() {
       lastScrollY = window.scrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -34,8 +34,8 @@ function Marquee() {
         {/* First instance of the text */}
         <motion.div
           initial={{ x: 0 }}
-          animate={{ x: scrollDirection === 1 ? '-100%' : '100%' }}
-          transition={{ ease: 'linear', repeat: Infinity, duration: 10 }}
+          animate={{ x: scrollDirection === 1 ? "-100%" : "100%" }}
+          transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
           className="flex"
         >
           <h1 className='text-[20vw] tracking-wider leading-none font-["Bebas"] uppercase -pt-[1vw] mb-[2.5vw] font-semibold pr-20'>
@@ -45,12 +45,12 @@ function Marquee() {
             we are vector
           </h1>
         </motion.div>
-        
+
         {/* Second instance of the text to ensure continuous scrolling */}
         <motion.div
           initial={{ x: 0 }}
-          animate={{ x: scrollDirection === 1 ? '-100%' : '100%' }}
-          transition={{ ease: 'linear', repeat: Infinity, duration: 10 }}
+          animate={{ x: scrollDirection === 1 ? "-100%" : "100%" }}
+          transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
           className="flex"
         >
           <h1 className='text-[20vw] tracking-wider leading-none font-["Bebas"] uppercase -pt-[1vw] mb-[2.5vw] font-semibold pr-20'>
