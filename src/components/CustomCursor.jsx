@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
@@ -21,23 +21,23 @@ const CustomCursor = () => {
       gsap.to(cursor, {
         left: cursorPosition.left,
         top: cursorPosition.top,
-        height: '12px',
-        width: '12px',
+        height: "12px",
+        width: "12px",
         duration: 0.2,
       });
       gsap.to(tail, {
         left: cursorPosition.left,
         top: cursorPosition.top,
-        height: '5px',
-        width: '5px',
+        height: "5px",
+        width: "5px",
         duration: 0.5,
       });
     };
 
-    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener("mousemove", onMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
 

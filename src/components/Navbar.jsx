@@ -14,7 +14,7 @@ function Navbar() {
       } else if (currentScrollY < lastScrollY - 10) {
         setShowNavbar(true);
       }
-      setLastScrollY(prevScrollY => currentScrollY);
+      setLastScrollY((prevScrollY) => currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,7 +36,13 @@ function Navbar() {
     >
       {/* Logo */}
       <div className="logo">
-        <svg width="72" height="30" viewBox="0 0 72 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="72"
+          height="30"
+          viewBox="0 0 72 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           {/* SVG paths for the logo */}
         </svg>
       </div>
@@ -52,7 +58,12 @@ function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           ) : (
             <svg
@@ -62,7 +73,12 @@ function Navbar() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
             </svg>
           )}
         </button>
@@ -73,7 +89,7 @@ function Navbar() {
         {["Services", "Our Work", "About Us", "Insights"].map((item, index) => (
           <Link
             key={index}
-            to={`/${item.replace(/\s+/g, '').toLowerCase()}`}
+            to={`/${item.replace(/\s+/g, "").toLowerCase()}`}
             className={`relative text-lg font-medium tracking-wide text-zinc-900 hover:text-[#c9184a] transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-gray-800 hover:after:w-full after:transition-all after:duration-300`}
           >
             {item}
@@ -97,17 +113,19 @@ function Navbar() {
         }`}
       >
         <ul className="flex flex-col items-center justify-center h-full py-20">
-          {["Services", "Our Work", "About Us", "Insights", "Contact"].map((item, index) => (
-            <li key={index} className="py-4">
-              <Link
-                to={`/${item.replace(/\s+/g, '').toLowerCase()}`}
-                className="text-3xl font-medium tracking-wide text-zinc-100 hover:text-[#c9184a] transition-colors duration-300"
-                onClick={() => setIsMobileMenuOpen(false)} // Close menu after clicking
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
+          {["Services", "Our Work", "About Us", "Insights", "Contact"].map(
+            (item, index) => (
+              <li key={index} className="py-4">
+                <Link
+                  to={`/${item.replace(/\s+/g, "").toLowerCase()}`}
+                  className="text-3xl font-medium tracking-wide text-zinc-100 hover:text-[#c9184a] transition-colors duration-300"
+                  onClick={() => setIsMobileMenuOpen(false)} // Close menu after clicking
+                >
+                  {item}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
       </div>
     </nav>
